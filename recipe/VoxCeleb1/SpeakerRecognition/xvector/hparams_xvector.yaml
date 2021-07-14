@@ -1,0 +1,18 @@
+
+
+# about this experiment
+recipe: VoxCeleb1
+exp_name: config
+save_dir: !ref /data/result_spkbrain/<recipe>/<exp_name>
+save_path: !ref <save_dir>/save
+
+# VoxCeleb1
+# the dataset should be organized in the format announced in README.md in advance
+data_dir: /data/VoxCeleb1/
+trial_pairs: <data_dir>/veri_test2.txt
+split_ratio: [90, 10]
+train_csv: !ref <save_path>/train.csv
+dev_csv: !ref <save_path>/dev.csv
+# more options on data preprocessing
+random_crop: False
+crop_duration: 3.0
